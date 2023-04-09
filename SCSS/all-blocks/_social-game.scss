@@ -1,0 +1,141 @@
+.social{
+    background-image: url(../images/socialbackground.png);
+    min-height: 110vh;
+    background-size: 110vw 110vh;
+    background-repeat: no-repeat;
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx){
+    .social{
+    background-image: url(../images/socialbackground2x.png);
+    min-height: 110vh;
+    background-size: 110vw 110vh;
+    background-repeat: no-repeat;
+    }
+}
+    @include mobile (){
+        background-image: url(../images/blacknature.jpg);
+        min-height: 110vh;
+        background-size: 110vw 110vh;
+        background-repeat: no-repeat;
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (min--moz-device-pixel-ratio: 2),
+          only screen and (-o-min-device-pixel-ratio: 2/1),
+          only screen and (min-device-pixel-ratio: 2),
+          only screen and (min-resolution: 192dpi),
+          only screen and (min-resolution: 2dppx){
+    background-image: url(../images/backnature2x.png);
+    min-height: 110vh;
+    background-size: 110vw 110vh;
+    background-repeat: no-repeat;
+}
+
+    }
+    &-game{
+            display: flex;
+            align-items: baseline;
+            @include mobile (){
+                flex-direction: column;
+                justify-content: center;
+            }
+        &__decoration{
+        display: flex;
+        flex-direction: column;
+        &-toptitle{
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            @include mobile (){
+                font-size: 18px;
+                line-height: 18px;
+                letter-spacing: 2px;
+            }
+        }
+        &-title{
+        max-width: 600px;
+        font-family: $title-font;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-top: 9px;
+        border-bottom: 2px solid $primary-color;
+        @include mobile (){
+            font-size: 33px;
+            line-height: 33px;
+            letter-spacing: 3px;
+            max-width: 271px;
+        }
+        }
+        &-text{
+            margin-top: 60px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: justify;
+            max-width: 364px;
+            word-spacing: 1px;
+            align-self: flex-end;
+            @include mobile (){
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                max-width: 268px;
+            }
+            .single{
+                margin-top: 24px;
+                display: inline-block;
+                &__mark{
+                    padding-bottom: -1px;
+                    border-bottom: 5px solid $secondary-color;
+                }
+            }
+        }
+       }
+       &__hoverImg{
+        position: relative;
+        @include mobile (){
+            margin-top: 23px;
+        }
+        &-picturef{
+            position: absolute;
+            z-index: 3;
+            cursor: pointer;
+        }
+        &-pictures:hover{
+            z-index: 4;
+            transition:all linear 0.3s;
+        }  
+         &-picturet:hover{
+            z-index: 4;
+            transition:all linear 0.3s;
+        }
+        &-pictures{
+            position: absolute;
+            z-index: 2;
+            left: 87px;
+            top: 20px;
+            cursor: pointer;
+        }
+        &-picturet{
+            position: absolute;
+            z-index: 1;
+            top: 40px;
+            left: 105px;
+            cursor: pointer;
+        }
+       }  
+    }
+}
+
+
+.only{
+    max-width: 438px;
+    max-height: 563;
+}

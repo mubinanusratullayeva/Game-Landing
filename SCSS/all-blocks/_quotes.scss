@@ -1,0 +1,153 @@
+.quotes{
+    // background-image: url(../images/shadow.jpg);
+    height: 960px;
+    background-color: black;
+    background-image: url(../images/oleg-frolov-artwork-large-110736.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    padding: 159px 0;
+    // background-size: 100vw 100vh;
+    // background-repeat: no-repeat;
+    // background-image: radial-gradient(70.52% 37.27% at 24.21% 47.47%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 51.1%, #080A0B 99.74%);
+    // @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    //     only screen and (min--moz-device-pixel-ratio: 2),
+    //     only screen and (-o-min-device-pixel-ratio: 2/1),
+    //     only screen and (min-device-pixel-ratio: 2),
+    //     only screen and (min-resolution: 192dpi),
+    //     only screen and (min-resolution: 2dppx){
+    // // background-image: url(../images/shadow2x.jpg);
+    // min-height: 100vh;
+    // background-size: 100vw 100vh;
+    // background-repeat: no-repeat;
+    // background-image: radial-gradient(70.52% 37.27% at 24.21% 47.47%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 51.1%, #080A0B 99.74%);
+    //     }
+    &__blocks{
+        @include centerItemsBtw();
+        @include mobile(){
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        &-decoration{
+            &--toptitle{
+                font-family: $title-font;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 24px;
+                letter-spacing: 2px;
+                @include mobile(){
+                    font-size: 18px;
+                    line-height: 18px;
+                    letter-spacing: 2px;
+                }
+            }
+            &--title{
+                font-family: $title-font;
+                font-weight: 700;
+                font-size: 80px;
+                line-height: 80px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin-top: 8px;
+                @include mobile(){
+                    font-size: 33px;
+                    line-height: 33px;
+                    letter-spacing: 3px;
+                }
+            }
+            &--text{
+                max-width: 434px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                margin: 32px 0 12px 0;
+                @include mobile(){
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-align: justify;
+                }
+            }
+        }
+        &-cards{
+            display: flex;
+            flex-direction: column;
+            row-gap: 29px;
+            min-width: 614px;
+            @include mobile(){
+                align-items: center;
+            }
+            &--card:nth-child(2){
+               align-self: flex-start;
+               @include mobile (){
+                align-self: center;
+               }
+            }
+            &--card{
+                align-self: flex-end;
+                @include mobile (){
+                    align-self: center;
+                }
+            }
+            &--card{
+                background: rgb(70, 68, 68);
+                border-radius: 10px;
+                min-width: 452px;
+                padding: 11px 19px 21px 12px;
+                @include mobile(){
+                    max-width: 289px;
+                }
+                .cards__card-navbar{
+                    @include centerItems();
+                    position: relative;
+                    img:nth-child(1){
+                        z-index: 1;
+                    }
+                    .cardRound{
+                        width: 64px;
+                        height: 64px;
+                        border-radius: 50%;
+                        background-color: $secondary-color;
+                        display: block;
+                        position: absolute;
+                        left: 12px;
+                        top: 6px;
+                    }
+                    h3{
+                        font-family: $title-font;
+                        max-width: 110px;
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 24px;
+                        letter-spacing: 2px;
+                        color: $secondary-color;
+                        margin-left: 22px;
+                        margin-right: 215px;
+                        span{
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 22px;
+                            text-align: justify;
+                            opacity: 0.5;
+                            color: $primary-color;
+                        }
+                    }
+               }
+               p{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                margin-top: 22px;
+               }
+               time{
+                margin-top: 8px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                opacity: 0.5;
+               }
+            }
+        }
+    }
+
+}

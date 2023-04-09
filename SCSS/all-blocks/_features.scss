@@ -1,0 +1,109 @@
+.features{
+  background-image: url(../images/Group.png);
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  padding-top: 167px;
+     @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx){
+  background-image: url(../images/Group@2x.png);
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  padding-top: 167px;
+
+  }
+  @include mobile(){
+  background-image: url(../images/personres.jpg);
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  padding-top: 92px;
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx){
+  background-image: url(../images/personres2x.png);
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  padding-top: 92px;
+  }
+  }
+  &-block{
+    @include centerItems();
+    justify-content: flex-end;
+    &__decoration{
+        &-toptitle{
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            @include mobile(){
+                font-size: 18px;
+                line-height: 18px;
+                letter-spacing: 2px;
+            }
+        }
+        &-mainTitle{
+            font-family: $title-font;
+            font-weight: 700;
+            margin-top: 8px;
+            margin-bottom: 34px;
+            font-size: 80px;
+            line-height: 80px;
+            letter-spacing: 3px;
+            @include mobile(){
+                font-size: 33px;
+                line-height: 33px;
+                letter-spacing: 3px;
+            }
+        }
+        &-title{
+            color: $secondary-color;
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 36px;
+            letter-spacing: 2px;
+            margin-top: 36px;
+            @include centerItems();
+            @include mobile(){
+                font-size: 21px;
+                line-height: 21px;
+                text-align: center;
+                letter-spacing: 2px;
+
+            }
+            .title-round{
+                display: block;
+                border-radius: 50%;
+                border: 1px solid $primary-color;
+                width: 14px;
+                height: 14px;
+                margin-right: 32px;
+            }
+        }
+        &-text{
+            margin: 5px 0 27px 0;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: justify;
+            max-width: 362px;
+            @include mobile(){
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+    }
+  }
+}

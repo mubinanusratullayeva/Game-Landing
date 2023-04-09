@@ -1,0 +1,16 @@
+@mixin centerItems{
+    display: flex;
+    align-items: center;
+}
+
+@mixin centerItemsBtw{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin mobile {
+    @media screen and (max-width:576px){
+        @content;
+    }
+}

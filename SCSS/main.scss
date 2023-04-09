@@ -1,0 +1,57 @@
+@import'./fonts';
+@import'./mixins';
+@import'./variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    color: $primary-color;
+    font-family: $secondary-font;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1200px;
+    // border: 4px solid blue;
+    @media screen and (max-width:576px) {
+        // border: 2px solid blue;
+    }
+}
+
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding-bottom: 53px;
+}
+
+nav{
+    width: 100%;
+}
+
+.btn{
+    min-width: 260px;
+    border-radius: 4px;
+    background: $btn-linear; 
+    padding: 17px 17px 20px 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 28px;
+    @media screen and (max-width:576px){
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+@import'./all-blocks/all-blocks';

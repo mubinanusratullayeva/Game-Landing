@@ -1,0 +1,110 @@
+.requirements{
+  background-image: url(../images/darkcastle.png);
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  padding-top: 145px;
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (min--moz-device-pixel-ratio: 2),
+      only screen and (-o-min-device-pixel-ratio: 2/1),
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx){
+        background-image: url(../images/darkcastle2x.png);
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        padding: 145px 0 170px 0;
+      }
+      @include mobile (){
+        min-height: 649vh;
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        padding: 0;
+        background-image: url(../images/rescas.jpg);
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx){
+        background-image: url(../images/rescas2x.png);
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+        padding: 0;
+        }
+    }
+    &__block{
+        &-toptitle{
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            text-align: center;
+            @include mobile(){
+                font-size: 18px;
+                line-height: 18px;
+                letter-spacing: 2px;
+            }
+        }
+        &-title{
+            font-family: $title-font;
+            font-weight: 700;
+            font-size: 80px;
+            line-height: 80px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: 8px;
+            text-align: center;
+            @include mobile(){
+                font-size: 33px;
+                line-height: 33px;
+                text-align: center;
+                letter-spacing: 3px;
+        }
+        }
+        &-grid{
+            display: grid;
+            grid-template-columns: repeat(2, 286px);
+            grid-template-rows: repeat(3,123px);
+            @include mobile (){
+                grid-template-columns: repeat(2, 180px);
+                grid-template-rows: repeat(3, 120);
+                margin-top: 65px;
+            }
+            &--item{
+            border: 1px solid #979797;
+            padding: 14px 0 31px 19px;
+            h3{
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 24px;
+                letter-spacing: 2px;
+                color: $secondary-color;
+                @include mobile(){
+                    font-size: 18px;
+                    line-height: 18px;
+                    letter-spacing: 2px;
+                }
+            }
+            p{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                margin-top: 7px;
+                @include mobile (){
+                    max-width: 123px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+            }   
+            &--item:nth-child(5){
+             grid-column: 1/3;
+            }
+        }
+    }
+}

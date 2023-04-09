@@ -1,0 +1,25 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v34-latin-regular.eot');
+  src: url('../fonts/open-sans-v34-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/open-sans-v34-latin-regular.woff2') format('woff2'),
+       url('../fonts/open-sans-v34-latin-regular.woff') format('woff'),
+       url('../fonts/open-sans-v34-latin-regular.ttf') format('truetype'),
+       url('../fonts/open-sans-v34-latin-regular.svg#OpenSans') format('svg');
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/bebas-neue-v9-latin-regular.eot');
+    src: url('../fonts/bebas-neue-v9-latin-regular.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/bebas-neue-v9-latin-regular.woff2') format('woff2'),
+         url('../fonts/bebas-neue-v9-latin-regular.woff') format('woff'), 
+         url('../fonts/bebas-neue-v9-latin-regular.ttf') format('truetype'),
+         url('../fonts/bebas-neue-v9-latin-regular.svg#BebasNeue') format('svg');
+  }

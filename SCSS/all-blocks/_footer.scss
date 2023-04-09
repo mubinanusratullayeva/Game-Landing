@@ -1,0 +1,66 @@
+footer{
+    padding-bottom: 51px;
+    background-color: #000A0B;
+    .foot{
+        @include centerItemsBtw();
+        border-bottom: 1px solid $primary-color;
+        padding-bottom: 30px;
+        @include mobile(){
+            flex-direction: column;
+        }
+        &__menu{
+            @include centerItems();
+            column-gap: 22px;
+            @include mobile(){
+                flex-wrap: wrap;
+                row-gap: 21px;
+                margin: 42px 0;
+            }
+            &-list{
+                &--link{
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-align: right;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: $primary-color;
+                    padding-bottom: 40px;
+                }
+            }
+        }
+        &__icons{
+            @include centerItems();
+            column-gap: 54px;
+        }
+    }
+}
+.lastBox{
+    margin-top: 22px;
+    @include centerItemsBtw();
+    @include mobile(){
+        flex-direction: column;
+    }
+    span:nth-child(1){
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        display: block;
+    }
+    span:nth-child(2){
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: right;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        @include mobile(){
+            margin-top: 32px;
+            max-width: 161px;
+            line-height: 24px;
+        }
+    }
+}
